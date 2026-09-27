@@ -14,6 +14,7 @@ import './App.css';
 export function App() {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'dark');
+    window.scrollTo(0, 0);
   }, []);
 
   return (

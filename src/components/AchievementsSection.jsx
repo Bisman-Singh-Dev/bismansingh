@@ -45,7 +45,9 @@ export const AchievementsSection = () => {
       metric: '640+ Members',
       title: 'Telegram Math Community',
       desc: 'Founded, curates, and leads an active community of 640+ students discussing advanced Olympiad mathematics, competitive proofs, and problem-solving techniques.',
-      tag: 'Community Founder & Leader'
+      tag: 'Community Founder & Leader',
+      link: 'https://t.me/Olympians_India',
+      linkText: 'Join @Olympians_India ↗'
     },
     {
       icon: <BookOpen size={22} />,
@@ -103,6 +105,21 @@ export const AchievementsSection = () => {
               </div>
 
               <p className="achievement-desc">{item.desc}</p>
+
+              {item.link && (
+                <div style={{ marginTop: 'auto', paddingTop: '6px' }}>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                    style={{ padding: '6px 14px', fontSize: '0.75rem', width: 'fit-content', borderRadius: 'var(--radius-full)' }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <span>{item.linkText || 'Open Link ↗'}</span>
+                  </a>
+                </div>
+              )}
 
               <div className="achievement-footer-tag">
                 <CheckCircle2 size={13} color="#ff6b35" />

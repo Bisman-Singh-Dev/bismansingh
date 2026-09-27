@@ -45,7 +45,7 @@ const DOMAIN_DATA = [
     title: 'IOQM 2026 & Mathematical Community',
     desc: 'Achieved 31/100 in the prestigious Indian Olympiad Qualifier in Mathematics (IOQM 2026). Founded and curated a high-level mathematics community on Telegram with 640+ active student problem solvers.',
     pills: ['IOQM: 31/100', '640+ Subscribers', 'Number Theory', 'Combinatorics', 'Geometry'],
-    link: '#achievements'
+    link: 'https://t.me/Olympians_India'
   },
   {
     tag: 'Aspirations & Future',

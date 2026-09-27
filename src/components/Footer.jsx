@@ -58,6 +58,9 @@ export const Footer = () => {
               <a href="https://github.com/Bisman-Singh-Dev" target="_blank" rel="noopener noreferrer" className="footer-link-item">
                 GitHub (@Bisman-Singh-Dev)
               </a>
+              <a href="https://t.me/Olympians_India" target="_blank" rel="noopener noreferrer" className="footer-link-item">
+                Telegram: @Olympians_India ↗
+              </a>
               <a href="mailto:Millinia70@gmail.com" className="footer-link-item">
                 Millinia70@gmail.com
               </a>
