@@ -1,0 +1,54 @@
+/* BorderGlow.css - Dynamic Edge Proximity & Cursor Ray Angle Glow */
+.border-glow-card {
+  position: relative;
+  background: var(--card-bg, #10141c);
+  border-radius: var(--border-radius, 24px);
+  padding: 1px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+}
+
+.border-glow-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.7);
+}
+
+.border-glow-card .edge-light {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  opacity: calc(var(--edge-proximity, 0) / 100);
+  background: conic-gradient(
+    from var(--cursor-angle, 0deg) at 50% 50%,
+    transparent 0deg,
+    var(--glow-color, #ff6b35) calc(var(--cone-spread, 25) * 0.5deg),
+    var(--glow-color-60, rgba(255, 107, 53, 0.6)) calc(var(--cone-spread, 25) * 1deg),
+    transparent calc(var(--cone-spread, 25) * 2deg),
+    transparent 360deg
+  );
+  filter: blur(calc(var(--glow-padding, 40px) * 0.25));
+  transition: opacity 0.2s ease;
+}
+
+.border-glow-card:hover .edge-light {
+  opacity: 1;
+}
+
+.border-glow-inner {
+  position: relative;
+  z-index: 1;
+  background: var(--card-bg, #10141c);
+  border-radius: calc(var(--border-radius, 24px) - 1px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.border-glow-card--light .border-glow-inner {
+  background: var(--bg-surface, #ffffff);
+}

@@ -1,0 +1,222 @@
+/* TerminalContactSection.css */
+.contact-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.terminal-contact-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .terminal-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Terminal Console Box */
+.terminal-console {
+  background: #080a0f;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-topbar {
+  background: #10141c;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.terminal-dot--red { background: #ef4444; }
+.terminal-dot--yellow { background: #f59e0b; }
+.terminal-dot--green { background: #10b981; }
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.terminal-body {
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  min-height: 340px;
+  max-height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.terminal-line {
+  word-break: break-word;
+}
+
+.terminal-prompt-prefix {
+  color: var(--accent-orange);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.terminal-output {
+  color: #94a3b8;
+  white-space: pre-wrap;
+  margin-top: 2px;
+}
+
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #00e5ff;
+  flex: 1;
+}
+
+.terminal-quick-chips {
+  padding: 10px 16px;
+  background: #0d1017;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.terminal-chip {
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.terminal-chip:hover {
+  background: rgba(255, 107, 53, 0.15);
+  color: var(--accent-orange-light);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+/* Contact Details Card */
+.contact-details-panel {
+  padding: 36px 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-channel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.contact-channel-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-medium);
+}
+
+.channel-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.channel-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 107, 53, 0.12);
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.channel-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.channel-val {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  background: #10b981;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

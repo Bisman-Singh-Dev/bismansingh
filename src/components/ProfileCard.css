@@ -1,0 +1,217 @@
+/* ProfileCard.css - 3D Tilt, Glare, and Interactive Card */
+.pc-card-wrapper {
+  position: relative;
+  display: inline-block;
+  perspective: 1200px;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.pc-behind {
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(
+    circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    var(--behind-glow-color, rgba(255, 107, 53, 0.45)),
+    transparent 65%
+  );
+  filter: blur(28px);
+  opacity: 0.55;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 36px;
+}
+
+.pc-card-wrapper:hover .pc-behind {
+  opacity: 0.9;
+}
+
+.pc-card-shell {
+  position: relative;
+  width: 100%;
+  border-radius: 28px;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg));
+  transition: transform 0.1s ease-out;
+  z-index: 1;
+}
+
+.pc-card-shell.entering {
+  transition: transform 0.25s ease-out;
+}
+
+.pc-card {
+  position: relative;
+  width: 100%;
+  border-radius: 28px;
+  background: var(--inner-gradient, linear-gradient(145deg, #161b24 0%, #0d1017 100%));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+              0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.pc-inside {
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+}
+
+.pc-shine {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.04) 30%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+.pc-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 45%
+  );
+  opacity: calc(var(--pointer-from-center, 0.5) * 0.7);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pc-avatar-content {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #11141a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  aspect-ratio: 4 / 4.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-avatar-content .avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.4s ease;
+}
+
+.pc-card-wrapper:hover .avatar {
+  transform: scale(1.03);
+}
+
+.pc-user-info {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  padding: 10px 14px;
+  background: rgba(13, 16, 23, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 4;
+}
+
+.pc-user-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pc-mini-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid var(--accent-orange);
+  flex-shrink: 0;
+}
+
+.pc-mini-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-user-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-handle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.pc-status {
+  font-size: 0.6875rem;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pc-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+}
+
+.pc-contact-btn {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  background: var(--accent-orange);
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pc-contact-btn:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+
+.pc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pc-details h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.pc-details p {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  font-family: var(--font-mono);
+}

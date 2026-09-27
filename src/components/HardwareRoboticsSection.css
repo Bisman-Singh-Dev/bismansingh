@@ -1,0 +1,281 @@
+/* HardwareRoboticsSection.css */
+.hardware-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.iprv-hero-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.iprv-top-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .iprv-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.iprv-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.iprv-step-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #f8fafc;
+  font-size: 0.875rem;
+}
+
+.iprv-step-link {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iprv-step-link:hover {
+  color: #ffffff;
+}
+
+.iprv-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .iprv-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.iprv-spec-box {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.iprv-spec-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-orange-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.iprv-spec-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Schematic Viewer Pod */
+.schematic-viewer-pod {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.schematic-tabs {
+  display: flex;
+  gap: 14px;
+}
+
+.schematic-tab-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.78125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.schematic-tab-btn.active {
+  background: var(--accent-cyan);
+  color: #090c10;
+  border-color: var(--accent-cyan);
+}
+
+.schematic-display-window {
+  width: 100%;
+  height: 330px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #090d14;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+}
+
+.schematic-display-window img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.schematic-display-window:hover img {
+  transform: scale(1.03);
+}
+
+.schematic-caption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Secondary Hardware Grid: Bloomy Mouse & Fast Line Follower */
+.hardware-secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .hardware-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hardware-card {
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  box-shadow: var(--shadow-card);
+}
+
+/* Bloomy Interactive Gesture Grid */
+.gesture-interactive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.gesture-btn {
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: all 0.2s ease;
+}
+
+.gesture-btn:hover, .gesture-btn.active {
+  background: rgba(0, 229, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.4);
+}
+
+.gesture-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.gesture-action {
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+}
+
+.gesture-feedback-box {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: #090c12;
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Fast Line Follower Image Space Slot */
+.flf-image-slot {
+  height: 200px;
+  border-radius: var(--radius-lg);
+  border: 2px dashed rgba(255, 107, 53, 0.3);
+  background: rgba(255, 107, 53, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flf-image-slot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+}
+
+.flf-slot-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 107, 53, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-orange);
+}
+
+.flf-slot-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #ffffff;
+}
+
+.flf-slot-sub {
+  font-size: 0.78125rem;
+  color: var(--text-muted);
+  max-width: 320px;
+}

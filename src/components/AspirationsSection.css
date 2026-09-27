@@ -1,0 +1,118 @@
+/* AspirationsSection.css */
+.aspirations-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.aspirations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .aspirations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aspiration-card {
+  padding: 36px 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: var(--shadow-card);
+  height: 100%;
+}
+
+.aspiration-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aspiration-logo-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.aspiration-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.aspiration-sub {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--accent-orange);
+  margin-top: 2px;
+}
+
+.aspiration-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.aspiration-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.pillar-tag {
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #cbd5e1;
+}
+
+/* North Star Banner */
+.north-star-banner {
+  margin-top: 48px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(16, 21, 29, 0.9) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.25);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.north-star-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.north-star-flow {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent-orange-light);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
