@@ -12,7 +12,7 @@ export const TerminalContactSection = () => {
     },
     {
       cmd: 'whoami',
-      out: 'Bisman Singh (Age 15) • Delhi Public School Indirapuram\nRobotics Engineer | AI/ML Researcher | Founder of DreamCollege'
+      out: 'Bisman Singh (Age 15) • Delhi Public School Indirapuram\nRobotics Engineer | AI/ML Researcher | Founder of Wish College'
     }
   ]);
   const [inputVal, setInputVal] = useState('');
@@ -21,15 +21,16 @@ export const TerminalContactSection = () => {
   const isInitialMount = useRef(true);
 
   const commandResponses = {
-    help: 'Available commands:\n- whoami       : Summary bio and school affiliation\n- projects     : All featured robotics & software projects\n- iprv         : Technical specs of Indian Pothole Recovery Vehicle\n- dreamcollege : Venture overview and link\n- achievements : Academic rank, IOQM 2026, French certifications\n- telegram     : 640+ Member Olympiad Math Community\n- mit          : Target labs and North Star vision\n- contact      : Official email and handles\n- clear        : Clear terminal output',
-    whoami: 'Bisman Singh (Age 15) • Delhi Public School Indirapuram\nRole: Robotics & Autonomous Systems Builder | Founder @ DreamCollege\nFocus: Edge AI, YOLO Computer Vision, Mechatronics, Mathematical Olympiads',
-    projects: 'Featured Projects:\n1. IPRV (Indian Pothole Recovery Vehicle) - 6WD Rocker-Bogie Rover\n2. YOLO Pothole Detection Model - 4,719 images, 7,340 annotations\n3. Bloomy - MediaPipe 21-point Virtual Gesture Mouse\n4. DreamCollege - Global Admissions Platform (dreamcollege.co.in)\n5. VitalLens (RoboDoc) - Groq Whisper AI Medical Diagnostics\n6. Fast Line Follower - 8-Ch Optical IR closed-loop PID bot',
+    help: 'Available commands:\n- whoami       : Summary bio and school affiliation\n- projects     : All featured robotics & software projects\n- iprv         : Technical specs of Indian Pothole Recovery Vehicle\n- wishcollege  : Venture overview and link\n- achievements : Academic rank, IOQM 2026, French certifications\n- telegram     : 640+ Member Olympiad Math Community\n- mit          : Target labs and North Star vision\n- contact      : Official email and handles\n- clear        : Clear terminal output',
+    whoami: 'Bisman Singh (Age 15) • Delhi Public School Indirapuram\nRole: Robotics & Autonomous Systems Builder | Founder @ Wish College\nFocus: Edge AI, YOLO Computer Vision, Mechatronics, Mathematical Olympiads',
+    projects: 'Featured Projects:\n1. IPRV (Indian Pothole Recovery Vehicle) - 6WD Rocker-Bogie Rover\n2. YOLO Pothole Detection Model - 4,719 images, 7,340 annotations\n3. Bloomy - MediaPipe 21-point Virtual Gesture Mouse\n4. Wish College - Global Admissions Platform (wishcollege.co.in)\n5. VitalLens (RoboDoc) - Groq Whisper AI Medical Diagnostics\n6. Fast Line Follower - 8-Ch Optical IR closed-loop PID bot',
     iprv: 'IPRV Specs:\n- Controller : Raspberry Pi 4 + Arduino MEGA (L298N PWM)\n- Sensors    : 360° RPLIDAR A1M8 (12m range) + Neo-6M GPS\n- Dispersion : Jam-proof auger POP cold-mix dispenser\n- Power      : 2x 12V 30Ah high-capacity battery bank\n- Step 1     : YOLO11 detection model trained & deployed ✅',
-    dreamcollege: 'DreamCollege (www.dreamcollege.co.in):\nPathway To Your Dream School — Comprehensive university admissions directory, scholarship roadmaps, and community for aspiring applicants.',
+    wishcollege: 'Wish College (www.wishcollege.co.in):\nPathway To Your Dream School — Comprehensive university admissions directory, scholarship roadmaps, and community for aspiring applicants.',
+    dreamcollege: 'Wish College (www.wishcollege.co.in):\nPathway To Your Dream School — Comprehensive university admissions directory, scholarship roadmaps, and community for aspiring applicants.',
     achievements: 'Honors:\n- Scored 31/100 in IOQM 2026 Olympiad\n- 94.9% in Class 9th CBSE Board (DPS Indirapuram)\n- 640+ Member Math Community on Telegram (t.me/Olympians_India)\n- French Diplomas: CEFR A1, A2, B1 Graduate\n- Ashoka University Young Scholars Programme (YSP)\n- Multiple time Science fest Winner across inter-school competitions',
     telegram: 'Olympians India (Telegram Community):\nLink: https://t.me/Olympians_India\nFounded and curated by Bisman Singh. Active discussion group of 640+ students solving Olympiad mathematics, IOQM, and algorithmic problems.',
     mit: 'North Star: Massachusetts Institute of Technology (MIT)\nDepartment: Mechanical Engineering & EECS\nResearch Target: Bio-inspired autonomous systems and field robotics for developing infrastructure.',
-    contact: 'Direct Contact:\n- Email    : Millinia70@gmail.com\n- Telegram : https://t.me/Olympians_India\n- GitHub   : https://github.com/Bisman-Singh-Dev\n- ORCID    : 0009-0009-6133-223X\n- Venture  : https://www.dreamcollege.co.in'
+    contact: 'Direct Contact:\n- Email    : Millinia70@gmail.com\n- Telegram : https://t.me/Olympians_India\n- GitHub   : https://github.com/Bisman-Singh-Dev\n- ORCID    : 0009-0009-6133-223X\n- Venture  : https://www.wishcollege.co.in'
   };
 
   const handleCommandSubmit = (e) => {
@@ -131,7 +132,7 @@ export const TerminalContactSection = () => {
               <span style={{ fontSize: '0.6875rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
                 Presets:
               </span>
-              {['help', 'iprv', 'projects', 'achievements', 'mit', 'dreamcollege', 'clear'].map((cmd) => (
+              {['help', 'iprv', 'projects', 'achievements', 'mit', 'wishcollege', 'clear'].map((cmd) => (
                 <button
                   key={cmd}
                   onClick={() => executeChip(cmd)}
@@ -158,7 +159,7 @@ export const TerminalContactSection = () => {
                   Let's Build Something Impactful
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', lineHeight: 1.6 }}>
-                  Whether discussing autonomous systems research, mathematical problem solving, or expanding DreamCollege, feel free to reach out directly.
+                  Whether discussing autonomous systems research, mathematical problem solving, or expanding Wish College, feel free to reach out directly.
                 </p>
               </div>
 
@@ -205,7 +206,7 @@ export const TerminalContactSection = () => {
 
                 {/* Venture */}
                 <a
-                  href="https://www.dreamcollege.co.in"
+                  href="https://www.wishcollege.co.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-channel-item"
@@ -215,8 +216,8 @@ export const TerminalContactSection = () => {
                       <Globe size={18} />
                     </div>
                     <div className="channel-text">
-                      <span className="channel-title">DreamCollege</span>
-                      <span className="channel-val">www.dreamcollege.co.in</span>
+                      <span className="channel-title">Wish College</span>
+                      <span className="channel-val">www.wishcollege.co.in</span>
                     </div>
                   </div>
                   <ExternalLink size={16} color="var(--text-muted)" />

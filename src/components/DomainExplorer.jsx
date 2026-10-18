@@ -28,10 +28,10 @@ const DOMAIN_DATA = [
   },
   {
     tag: 'EdTech Venture & Startup',
-    title: 'DreamCollege — Pathway to Your Dream School',
+    title: 'Wish College — Pathway to Your Dream School',
     desc: 'A comprehensive college application guidance ecosystem founded by Bisman Singh. Connecting high-school students with top university guidance, scholarship roadmaps, mentor matching, and peer community.',
     pills: ['Founder & Dev', 'React / Next.js', 'Guidance Platform', 'Global Universities'],
-    link: 'https://www.dreamcollege.co.in'
+    link: 'https://www.wishcollege.co.in'
   },
   {
     tag: 'Edge Healthcare AI',

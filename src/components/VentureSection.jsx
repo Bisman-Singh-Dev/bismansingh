@@ -13,7 +13,7 @@ export const VentureSection = () => {
             <Compass size={14} />
             <span>Founder & Venture</span>
           </span>
-          <h2 className="section-title">DreamCollege 🎓</h2>
+          <h2 className="section-title">Wish College 🎓</h2>
           <p className="section-desc">
             Empowering students worldwide to navigate the hyper-competitive global college admissions landscape with clarity, community, and curated roadmaps.
           </p>
@@ -34,12 +34,12 @@ export const VentureSection = () => {
               </div>
 
               <div>
-                <h3 className="venture-heading">DreamCollege</h3>
+                <h3 className="venture-heading">Wish College</h3>
                 <p className="venture-tagline">Pathway To Your Dream School</p>
               </div>
 
               <p className="venture-text">
-                DreamCollege is a dedicated student-first guidance ecosystem engineered around the end-to-end college application journey. It bridges the information gap for ambitious high school students, offering comprehensive university profiles, scholarship directories, portfolio building guidance, and peer-to-peer mentorship.
+                Wish College is a dedicated student-first guidance ecosystem engineered around the end-to-end college application journey. It bridges the information gap for ambitious high school students, offering comprehensive university profiles, scholarship directories, portfolio building guidance, and peer-to-peer mentorship.
               </p>
 
               {/* Feature Highlights Grid */}
@@ -87,18 +87,18 @@ export const VentureSection = () => {
 
               <div className="venture-actions">
                 <a
-                  href="https://www.dreamcollege.co.in"
+                  href="https://www.wishcollege.co.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary"
                 >
                   <Globe size={16} />
-                  <span>Visit www.dreamcollege.co.in</span>
+                  <span>Visit www.wishcollege.co.in</span>
                   <ArrowUpRight size={16} />
                 </a>
 
                 <a
-                  href="https://github.com/Bisman-Singh-Dev/Dream-College"
+                  href="https://github.com/Bisman-Singh-Dev/Wish-College"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary"
@@ -114,15 +114,15 @@ export const VentureSection = () => {
               <div className="venture-logo-pod">
                 <div className="venture-logo-glow" />
                 <img
-                  src="/assets/dreamcollege_logo.png"
-                  alt="Dream College Official Logo"
+                  src="/assets/wishcollege_logo.png"
+                  alt="Wish College Official Logo"
                   className="venture-logo-img"
                 />
               </div>
 
               <div className="venture-status-pill">
                 <span className="status-dot" />
-                <span>Active Venture • dreamcollege.co.in</span>
+                <span>Active Venture • wishcollege.co.in</span>
               </div>
             </div>
           </div>

@@ -34,8 +34,8 @@ export const HeroSection = () => {
               High school engineer and researcher passionate about the intersection of{' '}
               <strong style={{ color: 'var(--text-primary)' }}>Autonomous Robotics, Computer Vision (YOLO), Edge AI,</strong> and{' '}
               <strong style={{ color: 'var(--text-primary)' }}>Mechatronics</strong>. Founder of{' '}
-              <a href="https://www.dreamcollege.co.in" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-orange)', textDecoration: 'underline' }}>
-                DreamCollege
+              <a href="https://www.wishcollege.co.in" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-orange)', textDecoration: 'underline' }}>
+                Wish College
               </a>.
             </p>
 
@@ -60,12 +60,12 @@ export const HeroSection = () => {
               </a>
 
               <a
-                href="https://www.dreamcollege.co.in"
+                href="https://www.wishcollege.co.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
               >
-                <span>DreamCollege ↗</span>
+                <span>Wish College ↗</span>
               </a>
 
               <a

@@ -5,7 +5,7 @@ const DEFAULT_ITEMS = [
   '🤖 Autonomous Robotics & IPRV',
   '🧠 Computer Vision (YOLO11)',
   '🖱️ HCI & Gesture Control (Bloomy)',
-  '🎓 EdTech Venture (DreamCollege)',
+  '🎓 EdTech Venture (Wish College)',
   '🏥 Edge Healthcare AI (VitalLens)',
   '📐 Olympiad Math & IOQM',
   '🎯 The North Star: MIT & ISEF'

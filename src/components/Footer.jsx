@@ -31,7 +31,7 @@ export const Footer = () => {
             <div className="footer-col">
               <span className="footer-col-title">Navigation</span>
               <a href="#about" className="footer-link-item">About &amp; Dossier</a>
-              <a href="#venture" className="footer-link-item">DreamCollege</a>
+              <a href="#venture" className="footer-link-item">Wish College</a>
               <a href="#hardware" className="footer-link-item">Robotics &amp; IPRV</a>
               <a href="#software" className="footer-link-item">Computer Vision</a>
               <a href="#achievements" className="footer-link-item">Honors &amp; IOQM</a>
@@ -39,8 +39,8 @@ export const Footer = () => {
 
             <div className="footer-col">
               <span className="footer-col-title">Ventures &amp; Apps</span>
-              <a href="https://www.dreamcollege.co.in" target="_blank" rel="noopener noreferrer" className="footer-link-item">
-                DreamCollege ↗
+              <a href="https://www.wishcollege.co.in" target="_blank" rel="noopener noreferrer" className="footer-link-item">
+                Wish College ↗
               </a>
               <a href="https://vitallens-eight.vercel.app" target="_blank" rel="noopener noreferrer" className="footer-link-item">
                 VitalLens (RoboDoc) ↗
